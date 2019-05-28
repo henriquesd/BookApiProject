@@ -32,21 +32,24 @@ namespace BookApiProject
             // services.AddDbContext<BookDbContext>(c => c.UseSqlServer(connectionString));
             // then add this line on appsettings.json, on "connectionStrings": "bookDbConnectionString": "Server=(localdb)\\mssqllocaldb;Database=BookApiProject;Trusted_Connection=True;"
             
+            // Usign Sqlite \/;
             services.AddDbContext<BookDbContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, BookDbContext context)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            // app.Run(async (context) =>
+            // {
+            //     await context.Response.WriteAsync("Hello World!");
+            // });
+
+            context.SeedDataContext();
 
             app.UseMvc();
         }

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookApiProject.Migrations
 {
     [DbContext(typeof(BookDbContext))]
-    [Migration("20190528171355_InitialDatabaseCreation")]
+    [Migration("20190528172300_InitialDatabaseCreation")]
     partial class InitialDatabaseCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -121,7 +121,7 @@ namespace BookApiProject.Migrations
 
                     b.Property<int?>("BookId");
 
-                    b.Property<string>("HeadLine")
+                    b.Property<string>("Headline")
                         .IsRequired()
                         .HasMaxLength(200);
 

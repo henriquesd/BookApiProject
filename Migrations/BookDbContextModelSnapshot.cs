@@ -119,7 +119,7 @@ namespace BookApiProject.Migrations
 
                     b.Property<int?>("BookId");
 
-                    b.Property<string>("HeadLine")
+                    b.Property<string>("Headline")
                         .IsRequired()
                         .HasMaxLength(200);
 

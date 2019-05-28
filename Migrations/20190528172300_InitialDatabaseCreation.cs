@@ -113,7 +113,7 @@ namespace BookApiProject.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    HeadLine = table.Column<string>(maxLength: 200, nullable: false),
+                    Headline = table.Column<string>(maxLength: 200, nullable: false),
                     ReviewText = table.Column<string>(maxLength: 2000, nullable: true),
                     Rating = table.Column<int>(nullable: false),
                     ReviewerId = table.Column<int>(nullable: true),
