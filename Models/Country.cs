@@ -1,10 +1,17 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BookApiProject.Models
 {
     public class Country
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+
+        [Required]
+        [StringLength(50, ErrorMessage = "Country must be up to 50 characters in length")]
         public string Name { get; set; }
 
         // the navigational properties are better to be virutal; This allows Entity Framework to override a property and create a
