@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookApiProject.Migrations
 {
     [DbContext(typeof(BookDbContext))]
-    [Migration("20190528172300_InitialDatabaseCreation")]
+    [Migration("20190529135935_InitialDatabaseCreation")]
     partial class InitialDatabaseCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -111,7 +111,7 @@ namespace BookApiProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Contries");
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("BookApiProject.Models.Review", b =>

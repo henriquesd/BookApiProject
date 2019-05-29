@@ -109,7 +109,7 @@ namespace BookApiProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Contries");
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("BookApiProject.Models.Review", b =>
