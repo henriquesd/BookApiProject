@@ -23,7 +23,7 @@ namespace BookApiProject.Controllers
         [ProducesResponseType(200, Type = typeof(IEnumerable<CountryDto>))]
         public IActionResult GetCountries()
         {
-            var countries = _countryRepository.GetCountries().ToList();
+            var countries = _countryRepository.GetCountries();
             
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -64,7 +64,7 @@ namespace BookApiProject.Controllers
             return Ok(countryDto);
         }
 
-         //api/countries/authors/authorId
+        //api/countries/authors/authorId
         [HttpGet("authors/{authorId}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]

@@ -36,6 +36,7 @@ namespace BookApiProject
             services.AddDbContext<BookDbContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<ICountryRepository, CountryRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
