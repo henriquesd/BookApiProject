@@ -32,7 +32,7 @@ namespace BookApiProject
             // services.AddDbContext<BookDbContext>(c => c.UseSqlServer(connectionString));
             // then add this line on appsettings.json, on "connectionStrings": "bookDbConnectionString": "Server=(localdb)\\mssqllocaldb;Database=BookApiProject;Trusted_Connection=True;"
             
-            // Usign Sqlite \/;
+            // Using Sqlite \/;
             services.AddDbContext<BookDbContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
         }
 
@@ -49,7 +49,8 @@ namespace BookApiProject
             //     await context.Response.WriteAsync("Hello World!");
             // });
 
-            context.SeedDataContext();
+            // Uncomment the line below to seed the database;
+            // context.SeedDataContext();
 
             app.UseMvc();
         }
