@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\henrique_domareski\\projetos\\BookApiProject\\BookApiProject.csproj": {}
+    "C:\\Users\\Henrique\\source\\repos\\BookApiProject\\BookApiProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\henrique_domareski\\projetos\\BookApiProject\\BookApiProject.csproj": {
+    "C:\\Users\\Henrique\\source\\repos\\BookApiProject\\BookApiProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\henrique_domareski\\projetos\\BookApiProject\\BookApiProject.csproj",
+        "projectUniqueName": "C:\\Users\\Henrique\\source\\repos\\BookApiProject\\BookApiProject.csproj",
         "projectName": "BookApiProject",
-        "projectPath": "C:\\Users\\henrique_domareski\\projetos\\BookApiProject\\BookApiProject.csproj",
-        "packagesPath": "C:\\Users\\henrique_domareski\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\henrique_domareski\\projetos\\BookApiProject\\obj\\",
+        "projectPath": "C:\\Users\\Henrique\\source\\repos\\BookApiProject\\BookApiProject.csproj",
+        "packagesPath": "C:\\Users\\Henrique\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Henrique\\source\\repos\\BookApiProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\henrique_domareski\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Henrique\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
