@@ -33,7 +33,8 @@ namespace BookApiProject.Controllers
 
             foreach (var author in authors)
             {
-                authorsDto.Add(new AuthorDto{
+                authorsDto.Add(new AuthorDto
+                {
                     Id = author.Id,
                     FirstName = author.FirstName,
                     LastName = author.LastName
@@ -48,7 +49,7 @@ namespace BookApiProject.Controllers
         [ProducesResponseType(200, Type = typeof(AuthorDto))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public IActionResult GetReview(int authorId)
+        public IActionResult GetAuthor(int authorId)
         {
             if (!_authorRepository.AuthorExists(authorId))
                 return NotFound();
