@@ -66,7 +66,6 @@ namespace BookApiProject.Controllers
             return Ok(categoryDto);
         }
 
-        // TO DO - need to test it after we implement IBook repository
         //api/categories/books/bookId
         [HttpGet("books/{bookId}")]
         [ProducesResponseType(400)]

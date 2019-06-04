@@ -98,7 +98,6 @@ namespace BookApiProject.Controllers
             return Ok(booksDto);
         }
 
-        // To Do - Retest this action after book interface is implemented
         //api/authors/books/bookId
         [HttpGet("books/{bookId}")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<AuthorDto>))]
@@ -106,7 +105,7 @@ namespace BookApiProject.Controllers
         [ProducesResponseType(404)]
         public IActionResult GetAuthorsOfABook(int bookId)
         {
-            if (_bookRepository.BookExists(bookId))
+            if (!_bookRepository.BookExists(bookId))
                 return NotFound();
 
             var authors = _authorRepository.GetAuthorsOfABook(bookId);
