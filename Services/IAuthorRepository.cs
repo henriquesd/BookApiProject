@@ -3,12 +3,12 @@ using BookApiProject.Models;
 
 namespace BookApiProject.Services
 {
-    public interface IAuthorRepository
+    public interface IAuthorRepository 
     {
-         ICollection<Author> GetAuthors();
-         Author GetAuthor(int authorId);
-         ICollection<Author> GetAuthorsOfABook(int bookId);
-         ICollection<Book> GetBooksByAuthor(int authorId);
-         bool AuthorExists(int authorId);
+        bool AuthorExists(int authorId);
+        Author GetAuthor(int authorId);
+        ICollection<Author> GetAuthors();
+        ICollection<Author> GetAuthorsOfABook(int bookId);
+        ICollection<Book> GetBooksByAuthor(int authorId);
     }
 }
