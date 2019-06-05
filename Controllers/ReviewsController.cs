@@ -135,7 +135,7 @@ namespace BookApiProject.Controllers
         [HttpPost]
         [ProducesResponseType(201, Type = typeof(Review))]
         [ProducesResponseType(400)]
-        [ProducesResponseType(422)]
+        [ProducesResponseType(404)]
         [ProducesResponseType(500)]
         public IActionResult CreateCategory([FromBody]Review reviewToCreate)
         {
@@ -159,7 +159,7 @@ namespace BookApiProject.Controllers
 
             if (!_reviewRepository.CreateReview(reviewToCreate))
             {
-                ModelState.AddModelError("", $"Something went wrong saving reviewe");
+                ModelState.AddModelError("", $"Something went wrong saving review");
                 return StatusCode(500, ModelState);
             }
 
