@@ -131,7 +131,7 @@ namespace BookApiProject.Controllers
         [ProducesResponseType(201, Type = typeof(Reviewer))]
         [ProducesResponseType(400)]
         [ProducesResponseType(500)]
-        public IActionResult CreateCountry([FromBody]Reviewer reviewerToCreate)
+        public IActionResult CreateReviewer([FromBody]Reviewer reviewerToCreate)
         {
             if (reviewerToCreate == null)
                 return BadRequest(ModelState);
@@ -184,7 +184,7 @@ namespace BookApiProject.Controllers
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         [ProducesResponseType(500)]
-        public IActionResult DeleteCountry(int reviewerId)
+        public IActionResult DeleteReviewer(int reviewerId)
         {
             if (!_reviewerRepository.ReviewerExists(reviewerId))
                 return NotFound();
